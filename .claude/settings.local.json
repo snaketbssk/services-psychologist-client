@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(npx create-next-app@latest _scaffold --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(sed -i 's/\"\"name\"\": \"\"scaffold-temp\"\"/\"\"name\"\": \"\"services-psychologist-client\"\"/' \"C:/Users/snake/source/repos/service-psy/services-psychologist-client/package.json\")",
+      "Bash(grep '\"\"name\"\"' \"C:/Users/snake/source/repos/service-psy/services-psychologist-client/package.json\")",
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:preview.themeforest.net)",
+      "WebFetch(domain:themeforest.net)",
+      "WebSearch",
+      "Bash(npx shadcn@latest init -d)"
+    ]
+  }
+}
