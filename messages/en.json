@@ -8,5 +8,19 @@
   "contact": "Contact",
   "bookSession": "Book a Session",
   "learnMore": "Learn More",
-  "language": "Language"
+  "language": "Language",
+  "BOOK_CONSULTATION": {
+    "HEADER": "Book a Consultation",
+    "MAIN": "Take The First Step Towards A Better Life",
+    "DESCRIPTION": "Our licensed psychologists are ready to listen. Fill in the form and we'll reach out within 24 hours to confirm your free initial consultation.",
+    "NAME_INPUT": "Your Full Name",
+    "EMAIL_INPUT": "Your Email Address",
+    "PHONE_INPUT": "Your Phone Number",
+    "MESSAGE_INPUT": "Tell us what you're looking for…",
+    "SUBMIT": "Submit",
+    "SUBMITTING": "Sending…",
+    "SUCCESS": "✓ Message sent!",
+    "ERROR": "Something went wrong. Please try again.",
+    "OPEN_MAP": "Open map"
+  }
 }

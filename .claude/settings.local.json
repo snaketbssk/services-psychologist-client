@@ -12,7 +12,10 @@
       "WebFetch(domain:themeforest.net)",
       "WebSearch",
       "Bash(npx shadcn@latest init -d)",
-      "Bash(npx shadcn@latest add card badge separator)"
+      "Bash(npx shadcn@latest add card badge separator)",
+      "WebFetch(domain:healingynextjs.vercel.app)",
+      "Bash(npx shadcn@latest add dialog)",
+      "Bash(cd:*)"
     ]
   }
 }
