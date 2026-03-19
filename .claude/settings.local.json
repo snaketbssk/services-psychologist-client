@@ -11,7 +11,8 @@
       "WebFetch(domain:preview.themeforest.net)",
       "WebFetch(domain:themeforest.net)",
       "WebSearch",
-      "Bash(npx shadcn@latest init -d)"
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npx shadcn@latest add card badge separator)"
     ]
   }
 }

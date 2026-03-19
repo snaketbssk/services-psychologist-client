@@ -1,39 +1,74 @@
 "use client";
 
 import { useT } from "@/i18n/useT";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { Separator } from "@/components/ui/separator";
+import SiteHeader from "@/components/SiteHeader";
+import HeroSection from "@/components/HeroSection";
+import ServiceCard from "@/components/ServiceCard";
 
 export default function HomePage() {
   const t = useT();
 
+  const services = [
+    {
+      icon: "🧠",
+      title: "Individual Therapy",
+      description: t.description,
+      badge: "Popular",
+      ctaLabel: t.learnMore,
+    },
+    {
+      icon: "👫",
+      title: "Couples Counseling",
+      description: t.description,
+      ctaLabel: t.learnMore,
+    },
+    {
+      icon: "🌿",
+      title: "Mindfulness & Stress",
+      description: t.description,
+      badge: "New",
+      ctaLabel: t.learnMore,
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-white px-6">
-      <div className="max-w-2xl text-center space-y-6">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          {t.welcome}
-        </h1>
+    <div className="flex min-h-screen flex-col bg-background">
+      <SiteHeader />
 
-        <p className="text-xl text-gray-500 italic">{t.tagline}</p>
+      <main className="flex-1">
+        <HeroSection />
 
-        <p className="text-lg leading-8 text-gray-600">{t.description}</p>
+        <Separator className="max-w-6xl mx-auto" />
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <button className="rounded-lg bg-indigo-600 px-6 py-3 text-white font-semibold hover:bg-indigo-700 transition-colors">
-            {t.bookSession}
-          </button>
-          <button className="rounded-lg border border-gray-300 px-6 py-3 text-gray-700 font-semibold hover:bg-gray-50 transition-colors">
-            {t.learnMore}
-          </button>
+        {/* Services grid */}
+        <section className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="font-heading text-2xl sm:text-3xl font-semibold text-foreground mb-2">
+            {t.getStarted}
+          </h2>
+          <p className="text-muted-foreground mb-10">{t.description}</p>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((svc) => (
+              <ServiceCard key={svc.title} {...svc} />
+            ))}
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-muted/40 py-8 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <span className="font-heading font-medium text-foreground">
+            Healingy
+          </span>
+          <nav className="flex gap-6">
+            <a href="#" className="hover:text-foreground transition-colors">{t.home}</a>
+            <a href="#" className="hover:text-foreground transition-colors">{t.about}</a>
+            <a href="#" className="hover:text-foreground transition-colors">{t.contact}</a>
+          </nav>
         </div>
-
-        <nav className="flex gap-6 justify-center text-sm text-gray-500 pt-2">
-          <a href="#" className="hover:text-gray-900">{t.home}</a>
-          <a href="#" className="hover:text-gray-900">{t.about}</a>
-          <a href="#" className="hover:text-gray-900">{t.contact}</a>
-        </nav>
-
-        <LanguageSwitcher />
-      </div>
-    </main>
+      </footer>
+    </div>
   );
 }
