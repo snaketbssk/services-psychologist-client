@@ -1,19 +1,44 @@
-FROM node:20.10-alpine
+# ─── Stage 1: deps ────────────────────────────────────────────────────────────
+FROM node:20-alpine AS deps
+WORKDIR /app
 
-# Set environment variables
-ENV NODE_OPTIONS=--openssl-legacy-provider
-ENV APP_ROOT=/web
+COPY package*.json ./
+RUN npm ci
 
-WORKDIR ${APP_ROOT}
+# ─── Stage 2: builder ─────────────────────────────────────────────────────────
+FROM node:20-alpine AS builder
+WORKDIR /app
 
-# Copy all files
+# Declare build-time argument and expose it as an env var so Next.js
+# can inline NEXT_PUBLIC_* values during "next build"
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Install dependencies
-RUN npm install --frozen-lockfile
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# Build without ESLint breaking CI
-RUN npm build --no-lint
+RUN npm run build
 
-# Run the app
-CMD ["npm", "start"]
+# ─── Stage 3: runner ──────────────────────────────────────────────────────────
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser  --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+EXPOSE 3000
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
+CMD ["node", "server.js"]
