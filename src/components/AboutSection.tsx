@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import BookConsultationModal from "@/components/BookConsultationModal";
+import BookConsultationDialog from "@/components/BookConsultationDialog";
 import AnimateIn from "@/components/AnimateIn";
 
 export default function AboutSection() {
@@ -46,7 +46,7 @@ export default function AboutSection() {
             ))}
           </ul>
           <div className="pt-2">
-            <BookConsultationModal
+            <BookConsultationDialog
               trigger={
                 <Button size="lg" className="font-semibold px-8">
                   {t("CTA")}

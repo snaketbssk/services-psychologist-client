@@ -27,7 +27,7 @@ export default function SiteFooter() {
   ];
 
   return (
-    <footer className="bg-[#fedac4] text-foreground py-16 px-6">
+    <footer className="bg-[#e0d9d0] text-foreground py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Col 1: Brand */}

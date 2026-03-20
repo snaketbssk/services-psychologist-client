@@ -2,8 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import BookConsultationModal from "@/components/BookConsultationModal";
 import AnimateIn from "@/components/AnimateIn";
+import BookConsultationDialog from "@/components/BookConsultationDialog";
 
 export default function HeroSection() {
   const t = useTranslations("HERO");
@@ -24,7 +24,7 @@ export default function HeroSection() {
             {t("DESCRIPTION")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <BookConsultationModal
+            <BookConsultationDialog
               trigger={
                 <Button size="lg" className="font-semibold px-8">
                   {t("CTA_PRIMARY")}

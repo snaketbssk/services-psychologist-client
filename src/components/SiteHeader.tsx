@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useT } from "@/i18n/useT";
-import { Button } from "@/components/ui/button";
-import BookConsultationModal from "@/components/BookConsultationModal";
+import { Button, buttonVariants } from "@/components/ui/button";
+import BookConsultationDialog from "@/components/BookConsultationDialog";
 import { cn } from "@/lib/utils";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -534,11 +534,9 @@ export default function SiteHeader({
               </button>
 
 {/* CTA (desktop) */}
-              <BookConsultationModal
+              <BookConsultationDialog
                 trigger={
-                  <Button
-                    className="hidden md:inline-flex rounded-full px-5 py-2 h-auto text-[13.5px] font-medium whitespace-nowrap"
-                  >
+                  <Button className="hidden md:inline-flex rounded-full px-5 py-2 h-auto text-[13.5px] font-medium whitespace-nowrap">
                     {ctaLabel || t.bookSession}
                   </Button>
                 }
@@ -655,9 +653,12 @@ export default function SiteHeader({
 
           {/* Drawer footer CTA */}
           <div className="px-5 pb-6 pt-2 shrink-0">
-            <BookConsultationModal
+            <BookConsultationDialog
               trigger={
-                <Button className="w-full rounded-full py-3 h-auto text-[14px] font-medium">
+                <Button
+                  className="w-full rounded-full py-3 h-auto text-[14px] font-medium"
+                  onClick={() => setMobileOpen(false)}
+                >
                   {ctaLabel || t.bookSession}
                 </Button>
               }
