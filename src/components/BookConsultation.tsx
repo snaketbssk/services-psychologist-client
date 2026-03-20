@@ -4,7 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { apiClient } from "@/lib/ApiClient";
+import { postConsultation, type IConsultationRequest } from "@/lib/service-psychologist";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -22,13 +22,6 @@ interface FormErrors {
   email?: string;
   phone?: string;
   message?: string;
-}
-
-interface ConsultationPayload {
-  name: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
 }
 
 // ─── Validation — mirrors C# CreateConsultationCommandValidator ───────────────
@@ -61,8 +54,8 @@ const INITIAL_FORM: FormState = { name: "", email: "", phone: "", message: "" };
 
 // ─── API ──────────────────────────────────────────────────────────────────────
 
-async function submitConsultation(payload: ConsultationPayload): Promise<void> {
-  await apiClient.post("/consultation", payload);
+async function submitConsultation(payload: IConsultationRequest): Promise<void> {
+  await postConsultation(payload);
 }
 
 // ─── Icons ────────────────────────────────────────────────────────────────────

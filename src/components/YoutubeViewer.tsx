@@ -3,7 +3,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { apiClient } from "@/lib/ApiClient";
+import { getVideos } from "@/lib/service-psychologist";
 import { cn } from "@/lib/utils";
 
 import type { Swiper as SwiperType } from "swiper";
@@ -49,13 +49,19 @@ const CARD_W = 300;
 
 // ─── Query ────────────────────────────────────────────────────────────────────
 
-async function fetchVideosPage(
-  pageNumber: number
-): Promise<PagedVideosResponse> {
-  const res = await apiClient.get(
-    `/videos?PageNumber=${pageNumber}&PageSize=${PAGE_SIZE}`
-  );
-  return res.data;
+async function fetchVideosPage(pageNumber: number): Promise<PagedVideosResponse> {
+  const res = await getVideos({ PageNumber: pageNumber, PageSize: PAGE_SIZE });
+  return {
+    totalCount: res.data.totalCount,
+    values: res.data.values.map((v) => ({
+      id: String(v.id),
+      day: v.day,
+      month: v.month,
+      category: v.category ?? "Shorts",
+      title: v.title,
+      videoId: v.videoId,
+    })),
+  };
 }
 
 // ─── Skeleton ─────────────────────────────────────────────────────────────────
