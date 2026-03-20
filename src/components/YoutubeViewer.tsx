@@ -401,21 +401,6 @@ export default function YoutubeViewer({
             </Swiper>
           </div>
 
-          {/* Loading-more skeletons live OUTSIDE the Swiper so appending them
-              never triggers swiper.update() and never shifts the scroll position */}
-          {isFetchingNextPage && (
-            <div className="flex gap-5 overflow-hidden px-6 mt-5">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="shrink-0"
-                  style={{ width: slideW, maxWidth: slideMaxW }}
-                >
-                  <VideoCardSkeleton />
-                </div>
-              ))}
-            </div>
-          )}
         </>
       )}
     </section>
