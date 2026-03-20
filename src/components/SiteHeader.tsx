@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useT } from "@/i18n/useT";
 import { Button } from "@/components/ui/button";
 import BookConsultationModal from "@/components/BookConsultationModal";
@@ -29,121 +30,7 @@ interface NavItem {
 }
 
 // ─── Nav data ─────────────────────────────────────────────────────────────────
-
-const NAV_ITEMS: NavItem[] = [
-  {
-    label: "Home",
-    href: "/",
-    mega: true,
-    megaTitle: "Pages",
-    children: [
-      { label: "Homepage 01", href: "/" },
-      { label: "Homepage 02", href: "/home-02" },
-      { label: "Homepage 03", href: "/home-03" },
-      { label: "Homepage 04", href: "/home-04" },
-      { label: "Home Slide Text Scroll", href: "/home-silde-text-scroll" },
-    ],
-  },
-  {
-    label: "Services",
-    href: "/our-service",
-    mega: true,
-    megaTitle: "Counseling & Therapy Services",
-    children: [
-      {
-        label: "Family Therapy",
-        href: "/service-details",
-        description:
-          "Improve family relationships, resolve conflicts, and build a healthy living environment.",
-      },
-      {
-        label: "Child & Adolescent Therapy",
-        href: "/service-details",
-        description:
-          "Specialized support for children and teens, helping them navigate emotional challenges.",
-      },
-      {
-        label: "Group Therapy",
-        href: "/service-details",
-        description:
-          "Join others with similar challenges, sharing experiences and support in a guided group setting.",
-      },
-      {
-        label: "Couples Therapy",
-        href: "/service-details",
-        description:
-          "Enhance understanding and affection between couples, helping to strengthen the relationship.",
-      },
-      {
-        label: "Trauma Counseling",
-        href: "/service-details",
-        description:
-          "Focused therapy to help you heal from past trauma and regain control over your life.",
-      },
-      {
-        label: "Individual Counseling",
-        href: "/service-details",
-        description:
-          "Personal psychological support to help you overcome stress, anxiety, and regain confidence.",
-      },
-    ],
-    whatsNew: [
-      {
-        label: "How Cognitive Behavioral Therap...",
-        href: "/blog-details",
-        date: "Oct 17, 2024",
-        image: "/images/blog/blog-details-list-1.jpg",
-      },
-      {
-        label: "Effective Strategies for Managing...",
-        href: "/blog-details",
-        date: "Oct 19, 2024",
-        image: "/images/blog/blog-details-list-2.jpg",
-      },
-      {
-        label: "Techniques for Everyday Stress...",
-        href: "/blog-details",
-        date: "Oct 26, 2024",
-        image: "/images/blog/blog-details-list-4.jpg",
-      },
-    ],
-  },
-  {
-    label: "Pages",
-    href: "#",
-    mega: true,
-    megaTitle: "Pages",
-    children: [
-      { label: "About", href: "/about" },
-      { label: "Therapists", href: "/our-therapists" },
-      { label: "Appointment", href: "/book-appointment" },
-    ],
-  },
-  {
-    label: "Shop",
-    href: "#",
-    mega: true,
-    megaTitle: "Shop",
-    children: [
-      { label: "Our Product", href: "/our-product" },
-      { label: "Shop Cart", href: "/shop-cart" },
-      { label: "Check Out", href: "/shop-check-out" },
-      { label: "Shop Details", href: "/product-details" },
-    ],
-  },
-  {
-    label: "Blogs",
-    href: "#",
-    mega: true,
-    megaTitle: "Blogs",
-    children: [
-      { label: "Blog Grid", href: "/blog-grid" },
-      { label: "Blog Details 1", href: "/blog-details" },
-      { label: "Blog Details 2", href: "/blog-details-2" },
-    ],
-  },
-  { label: "Contact", href: "/contact-us" },
-];
+// (NAV_ITEMS is built inside the component using useTranslations)
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
 
@@ -252,9 +139,7 @@ function TelegramIcon() {
 
 const SOCIAL_LINKS = [
   { icon: WhatsAppIcon, href: "#", label: "WhatsApp" },
-  { icon: XIcon, href: "#", label: "X (Twitter)" },
   { icon: InstagramIcon, href: "#", label: "Instagram" },
-  { icon: SkypeIcon, href: "#", label: "Skype" },
   { icon: TelegramIcon, href: "#", label: "Telegram" },
 ];
 
@@ -265,9 +150,10 @@ interface MegaDropdownProps {
   onClose: () => void;
   isActive: (href: string) => boolean;
   navbarBottom: number;
+  whatsNewLabel: string;
 }
 
-function MegaDropdown({ item, onClose, isActive, navbarBottom }: MegaDropdownProps) {
+function MegaDropdown({ item, onClose, isActive, navbarBottom, whatsNewLabel }: MegaDropdownProps) {
   const hasWhatsNew = Boolean(item.whatsNew?.length);
   const hasDescriptions = item.children?.some((c) => c.description);
 
@@ -281,7 +167,7 @@ function MegaDropdown({ item, onClose, isActive, navbarBottom }: MegaDropdownPro
 
       {/* Dropdown panel */}
       <div className="bg-background border-y border-border shadow-[0_12px_40px_rgb(0_0_0/10%)]">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-8">
           <div className="flex gap-0 py-6">
 
             {/* Left: card grid or simple list */}
@@ -339,7 +225,7 @@ function MegaDropdown({ item, onClose, isActive, navbarBottom }: MegaDropdownPro
                 <div className="w-px bg-border mx-0 self-stretch" />
                 <div className="w-[280px] pl-8 shrink-0">
                   <p className="text-[13px] font-semibold text-muted-foreground tracking-[0.06em] uppercase mb-4">
-                    What&apos;s New
+                    {whatsNewLabel}
                   </p>
                   <div className="flex flex-col gap-4">
                     {item.whatsNew?.map((post) => (
@@ -386,7 +272,6 @@ function MegaDropdown({ item, onClose, isActive, navbarBottom }: MegaDropdownPro
 // ─── Props ────────────────────────────────────────────────────────────────────
 
 interface SiteHeaderProps {
-  cartCount?: number;
   address?: string;
   email?: string;
   phone?: string;
@@ -399,7 +284,6 @@ interface SiteHeaderProps {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function SiteHeader({
-  cartCount = 2,
   address = "101 E 129th St, East Chicago, IN 46312, US",
   email = "themesflat@gmail.com",
   phone = "1-555-678-8888",
@@ -408,7 +292,78 @@ export default function SiteHeader({
   logoAlt = "Healingy",
 }: SiteHeaderProps) {
   const t = useT();
+  const nav = useTranslations("NAV");
   const pathname = usePathname();
+
+  const NAV_ITEMS: NavItem[] = [
+    {
+      label: nav("HOME"),
+      href: "/",
+      mega: true,
+      megaTitle: nav("PAGES_MEGA_TITLE"),
+      children: [
+        { label: nav("HOMEPAGE_01"), href: "/" },
+        { label: nav("HOMEPAGE_02"), href: "/home-02" },
+        { label: nav("HOMEPAGE_03"), href: "/home-03" },
+        { label: nav("HOMEPAGE_04"), href: "/home-04" },
+        { label: nav("HOME_SLIDE"), href: "/home-slide-text-scroll" },
+      ],
+    },
+    {
+      label: nav("SERVICES"),
+      href: "/our-service",
+      mega: true,
+      megaTitle: nav("SERVICES_MEGA_TITLE"),
+      children: [
+        { label: nav("FAMILY_THERAPY"),      href: "/service-details", description: nav("FAMILY_THERAPY_DESC")      },
+        { label: nav("CHILD_THERAPY"),       href: "/service-details", description: nav("CHILD_THERAPY_DESC")       },
+        { label: nav("GROUP_THERAPY"),       href: "/service-details", description: nav("GROUP_THERAPY_DESC")       },
+        { label: nav("COUPLES_THERAPY"),     href: "/service-details", description: nav("COUPLES_THERAPY_DESC")     },
+        { label: nav("TRAUMA_COUNSELING"),   href: "/service-details", description: nav("TRAUMA_COUNSELING_DESC")   },
+        { label: nav("INDIVIDUAL_COUNSELING"), href: "/service-details", description: nav("INDIVIDUAL_COUNSELING_DESC") },
+      ],
+      whatsNew: [
+        { label: "How Cognitive Behavioral Therap...", href: "/blog-details", date: "Oct 17, 2024", image: "/images/blog/blog-details-list-1.jpg" },
+        { label: "Effective Strategies for Managing...", href: "/blog-details", date: "Oct 19, 2024", image: "/images/blog/blog-details-list-2.jpg" },
+        { label: "Techniques for Everyday Stress...", href: "/blog-details", date: "Oct 26, 2024", image: "/images/blog/blog-details-list-4.jpg" },
+      ],
+    },
+    {
+      label: nav("PAGES"),
+      href: "#",
+      mega: true,
+      megaTitle: nav("PAGES_MEGA_TITLE"),
+      children: [
+        { label: nav("ABOUT"),       href: "/about"            },
+        { label: nav("THERAPISTS"),  href: "/our-therapists"   },
+        { label: nav("APPOINTMENT"), href: "/book-appointment" },
+      ],
+    },
+    {
+      label: nav("SHOP"),
+      href: "#",
+      mega: true,
+      megaTitle: nav("SHOP_MEGA_TITLE"),
+      children: [
+        { label: nav("OUR_PRODUCT"), href: "/our-product"       },
+        { label: nav("SHOP_CART"),   href: "/shop-cart"         },
+        { label: nav("CHECK_OUT"),   href: "/shop-check-out"    },
+        { label: nav("SHOP_DETAILS"), href: "/product-details"  },
+      ],
+    },
+    {
+      label: nav("BLOGS"),
+      href: "#",
+      mega: true,
+      megaTitle: nav("BLOGS_MEGA_TITLE"),
+      children: [
+        { label: nav("BLOG_GRID"),     href: "/blog-grid"      },
+        { label: nav("BLOG_DETAILS_1"), href: "/blog-details"  },
+        { label: nav("BLOG_DETAILS_2"), href: "/blog-details-2" },
+      ],
+    },
+    { label: nav("CONTACT"), href: "/contact-us" },
+  ];
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -467,20 +422,13 @@ export default function SiteHeader({
     <>
       {/* ── Top bar (desktop only) ───────────────────────────────────────── */}
       <div className="hidden md:block border-b border-border bg-background">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-8">
           <div className="flex items-center justify-between h-10">
 
-            {/* Left: address + email */}
-            <div className="flex items-center gap-5">
-              <div className="flex items-center gap-1.5 text-muted-foreground">
-                <LocationIcon />
-                <span className="text-[12.5px]">{address}</span>
-              </div>
-              <div className="w-px h-4 bg-border" />
-              <div className="flex items-center gap-1.5 text-muted-foreground">
-                <EmailIcon />
-                <span className="text-[12.5px]">{email}</span>
-              </div>
+            {/* Left: email */}
+            <div className="flex items-center gap-1.5 text-muted-foreground">
+              <EmailIcon />
+              <span className="text-[12.5px]">{email}</span>
             </div>
 
             {/* Right: phone + social icons */}
@@ -516,7 +464,7 @@ export default function SiteHeader({
         )}
         style={{ overflow: "visible" }}
       >
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-8">
           <div className="h-16 md:h-[72px] flex items-center gap-4">
 
             {/* Logo */}
@@ -567,6 +515,7 @@ export default function SiteHeader({
                         onClose={() => setOpenDropdown(null)}
                         isActive={isActive}
                         navbarBottom={navbarBottom}
+                        whatsNewLabel={nav("WHATS_NEW")}
                       />
                     </div>
                   )}
@@ -584,23 +533,7 @@ export default function SiteHeader({
                 <SearchIcon />
               </button>
 
-              {/* Cart (desktop only) */}
-              <div className="relative hidden md:block">
-                <Link
-                  href="/shop-cart"
-                  aria-label={`Cart, ${cartCount} items`}
-                  className="flex p-2 rounded-lg text-muted-foreground transition-colors hover:text-foreground hover:bg-muted"
-                >
-                  <CartIcon />
-                </Link>
-                {cartCount > 0 && (
-                  <span className="pointer-events-none absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-primary text-primary-foreground text-[9px] font-bold flex items-center justify-center">
-                    {cartCount}
-                  </span>
-                )}
-              </div>
-
-              {/* CTA (desktop) */}
+{/* CTA (desktop) */}
               <BookConsultationModal
                 trigger={
                   <Button

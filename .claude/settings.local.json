@@ -15,7 +15,9 @@
       "Bash(npx shadcn@latest add card badge separator)",
       "WebFetch(domain:healingynextjs.vercel.app)",
       "Bash(npx shadcn@latest add dialog)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npx tsc:*)"
     ]
   }
 }

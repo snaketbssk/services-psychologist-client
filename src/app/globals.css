@@ -89,8 +89,8 @@
      --ring               Focus ring           #C5956A  (= primary)
    ─────────────────────────────────────────────────────────────────────────────*/
 :root {
-  /* Page background — warm cream */
-  --background: oklch(0.974 0.009 85);
+  /* Page background — pure white */
+  --background: oklch(1 0 0);
   /* Primary text — warm dark brown */
   --foreground: oklch(0.175 0.030 72);
 
@@ -102,9 +102,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.175 0.030 72);
 
-  /* Primary — terracotta amber */
-  --primary: oklch(0.655 0.095 58);
-  --primary-foreground: oklch(0.985 0.004 82);
+  /* Primary — soft peach #fedac2 */
+  --primary: oklch(0.913 0.050 54);
+  --primary-foreground: oklch(0.175 0.030 72);
 
   /* Secondary — light sandy */
   --secondary: oklch(0.888 0.018 78);
@@ -130,13 +130,13 @@
   --input: oklch(0.822 0.022 80);
 
   /* Focus ring — same as primary */
-  --ring: oklch(0.655 0.095 58);
+  --ring: oklch(0.913 0.050 54);
 
   /* Border radius */
   --radius: 0.625rem;
 
   /* Charts — warm sand gradient */
-  --chart-1: oklch(0.655 0.095 58);   /* terracotta */
+  --chart-1: oklch(0.913 0.050 54);   /* soft peach */
   --chart-2: oklch(0.665 0.040 152);  /* sage green */
   --chart-3: oklch(0.750 0.060 80);   /* golden sand */
   --chart-4: oklch(0.580 0.070 300);  /* muted lavender */
@@ -145,8 +145,8 @@
   /* Sidebar */
   --sidebar: oklch(0.955 0.014 82);
   --sidebar-foreground: oklch(0.175 0.030 72);
-  --sidebar-primary: oklch(0.655 0.095 58);
-  --sidebar-primary-foreground: oklch(0.985 0.004 82);
+  --sidebar-primary: oklch(0.913 0.050 54);
+  --sidebar-primary-foreground: oklch(0.175 0.030 72);
   --sidebar-accent: oklch(0.888 0.018 78);
   --sidebar-accent-foreground: oklch(0.230 0.030 74);
   --sidebar-border: oklch(0.822 0.022 80);
@@ -190,6 +190,38 @@
   --sidebar-accent-foreground: oklch(0.880 0.012 82);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.720 0.095 58);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   YOUTUBE VIEWER — Swiper overrides
+   ─────────────────────────────────────────────────────────────────────────────*/
+.yt-swiper {
+  /* bleed to screen edges while keeping inner padding */
+  padding-inline: 1.5rem;
+  padding-bottom: 2.5rem; /* room for pagination dots */
+}
+
+.yt-swiper .swiper {
+  overflow: visible;
+}
+
+/* Pagination dots */
+.yt-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.yt-swiper .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: var(--muted-foreground);
+  opacity: 0.35;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.yt-swiper .swiper-pagination-bullet-active {
+  background: var(--primary);
+  opacity: 1;
+  transform: scale(1.35);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
