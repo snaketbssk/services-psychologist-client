@@ -1,7 +1,7 @@
 "use client";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { getVideos } from "@/lib/service-psychologist";
 import { cn } from "@/lib/utils";
@@ -24,18 +24,10 @@ export interface VideoPost {
   videoId: string;
 }
 
-export interface PagedVideosResponse {
+interface PagedVideosResponse {
   totalCount: number;
   values: VideoPost[];
 }
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-const thumb = (videoId: string) =>
-  `https://i.ytimg.com/vi/${videoId}/oar2.jpg`;
-
-const embedUrl = (videoId: string) =>
-  `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -47,7 +39,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 const PAGE_SIZE = 10;
 const CARD_W = 300;
 
-// ─── Query ────────────────────────────────────────────────────────────────────
+// ─── Data fetching ────────────────────────────────────────────────────────────
 
 async function fetchVideosPage(pageNumber: number): Promise<PagedVideosResponse> {
   const res = await getVideos({ PageNumber: pageNumber, PageSize: PAGE_SIZE });
@@ -64,13 +56,19 @@ async function fetchVideosPage(pageNumber: number): Promise<PagedVideosResponse>
   };
 }
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+const thumb = (videoId: string) =>
+  `https://i.ytimg.com/vi/${videoId}/oar2.jpg`;
+
+const embedUrl = (videoId: string) =>
+  `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+
 // ─── Skeleton ─────────────────────────────────────────────────────────────────
 
 function SkeletonBlock({ className }: { className?: string }) {
   return (
-    <div
-      className={cn("animate-pulse rounded bg-muted-foreground/10", className)}
-    />
+    <div className={cn("animate-pulse rounded bg-muted-foreground/10", className)} />
   );
 }
 
@@ -80,12 +78,32 @@ function VideoCardSkeleton() {
       <div className="w-full relative" style={{ aspectRatio: "9/16" }}>
         <SkeletonBlock className="absolute inset-0 rounded-none rounded-t-2xl" />
       </div>
-      <div className="p-[14px_16px_18px] space-y-2">
+      <div className="p-[14px_16px_18px] space-y-2 min-h-[108px]">
         <SkeletonBlock className="w-16 h-5 rounded-md" />
         <SkeletonBlock className="h-[18px]" />
         <SkeletonBlock className="h-[18px]" />
         <SkeletonBlock className="h-[18px] w-3/5" />
       </div>
+    </div>
+  );
+}
+
+function SkeletonRow({
+  isMobile,
+  count = 4,
+}: {
+  isMobile: boolean;
+  count?: number;
+}) {
+  const w = isMobile ? "80vw" : `${CARD_W}px`;
+  const maxW = isMobile ? "320px" : `${CARD_W}px`;
+  return (
+    <div className="flex gap-5 overflow-hidden px-6">
+      {Array.from({ length: count }).map((_, i) => (
+        <div key={i} className="shrink-0" style={{ width: w, maxWidth: maxW }}>
+          <VideoCardSkeleton />
+        </div>
+      ))}
     </div>
   );
 }
@@ -114,7 +132,7 @@ function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
   const catBg = CATEGORY_COLORS[post.category] ?? "#F5C5A3";
 
   return (
-    <div className="flex flex-col rounded-2xl overflow-hidden bg-muted h-full">
+    <div className="flex flex-col rounded-2xl overflow-hidden bg-muted">
       {/* Thumbnail / iframe */}
       <div
         className="relative w-full overflow-hidden shrink-0 rounded-t-2xl bg-black cursor-pointer"
@@ -131,7 +149,7 @@ function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
           />
         ) : (
           <>
-            {/* Thumbnail — group-hover handled by parent SwiperSlide wrapper */}
+            {/* Thumbnail — group-hover:scale triggered by .group wrapper in SwiperSlide */}
             <img
               src={thumb(post.videoId)}
               alt={post.title}
@@ -168,7 +186,7 @@ function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
       </div>
 
       {/* Card body */}
-      <div className="p-[14px_16px_18px] grow">
+      <div className="p-[14px_16px_18px] grow min-h-[108px]">
         <span
           className="inline-block px-2.5 py-[3px] rounded-md text-[10px] font-bold tracking-[0.1em] uppercase text-foreground mb-3"
           style={{ backgroundColor: catBg }}
@@ -185,7 +203,7 @@ function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
 
 // ─── Props ────────────────────────────────────────────────────────────────────
 
-interface YoutubeViewerProps {
+export interface YoutubeViewerProps {
   initialPosts?: VideoPost[];
   totalCount?: number;
   eyebrow?: string;
@@ -203,15 +221,16 @@ export default function YoutubeViewer({
   subheading,
 }: YoutubeViewerProps) {
   const t = useTranslations("YOUTUBE_VIEWER");
-  const resolvedEyebrow   = eyebrow   ?? t("EYEBROW");
-  const resolvedHeading   = heading   ?? t("HEADING");
+  const resolvedEyebrow    = eyebrow    ?? t("EYEBROW");
+  const resolvedHeading    = heading    ?? t("HEADING");
   const resolvedSubheading = subheading ?? t("SUBHEADING");
   const shortsLabel = t("SHORTS");
-  // Defer Swiper render until after hydration to avoid layout flash
+
+  // Defer Swiper mount until after hydration to avoid layout flash
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  // Match md breakpoint (< 900px = mobile)
+  // Match md breakpoint (≤ 899px = mobile)
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 899px)");
@@ -230,10 +249,10 @@ export default function YoutubeViewer({
       queryKey: ["videos"],
       queryFn: ({ pageParam }) => fetchVideosPage(pageParam as number),
       initialPageParam: hasSSR ? 2 : 1,
-      getNextPageParam: (lastPage, allPages) => {
-        const loaded = allPages.reduce((sum, p) => sum + p.values.length, 0);
-        const total = lastPage.totalCount ?? totalCount;
-        return loaded < total ? allPages.length + 1 : undefined;
+      getNextPageParam: (lastPage, _allPages, lastPageParam) => {
+        const loaded = _allPages.reduce((sum, p) => sum + p.values.length, 0);
+        const total = lastPage.totalCount || totalCount;
+        return loaded < total ? (lastPageParam as number) + 1 : undefined;
       },
       ...(hasSSR && {
         initialData: {
@@ -247,13 +266,42 @@ export default function YoutubeViewer({
 
   const allVideos = data?.pages.flatMap((p) => p.values) ?? [];
 
-  // Keep latest fetch state in a ref so Swiper event handlers never go stale
+  // ─── Scroll-position preservation ─────────────────────────────────────────
+  // When Swiper React detects new children it calls swiper.update() internally
+  // via useLayoutEffect. This can reset the translate on FreeMode.
+  // Fix: save translate when fetch starts, restore it after the new slides land.
+
+  const swiperRef = useRef<SwiperType | null>(null);
+  // null = no pending restore; number = translate to restore after next update
+  const savedTranslateRef = useRef<number | null>(null);
+
+  // Save current translate the moment an infinite-scroll fetch begins (desktop only)
+  useEffect(() => {
+    if (isFetchingNextPage && !isMobile && swiperRef.current) {
+      savedTranslateRef.current = swiperRef.current.translate;
+    }
+  }, [isFetchingNextPage, isMobile]);
+
+  // After new slides are committed to the DOM restore the saved translate.
+  // useLayoutEffect runs after all children's useLayoutEffect (Swiper included)
+  // but before the browser paints — so there is no visible flash.
+  useLayoutEffect(() => {
+    const saved = savedTranslateRef.current;
+    if (saved === null || !swiperRef.current) return;
+    savedTranslateRef.current = null;
+    swiperRef.current.setTranslate(saved);
+    swiperRef.current.updateProgress();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allVideos.length]);
+
+  // ─── Infinite-scroll triggers ──────────────────────────────────────────────
+
   const fetchRef = useRef({ fetchNextPage, hasNextPage, isFetchingNextPage });
   useEffect(() => {
     fetchRef.current = { fetchNextPage, hasNextPage, isFetchingNextPage };
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
-  // onProgress fires continuously during free-scroll (onSlideChange does not in FreeMode)
+  // Fires continuously during free-scroll (onSlideChange doesn't fire in FreeMode)
   const handleProgress = useCallback((_swiper: SwiperType, progress: number) => {
     const { fetchNextPage, hasNextPage, isFetchingNextPage } = fetchRef.current;
     if (progress >= 0.75 && hasNextPage && !isFetchingNextPage) {
@@ -261,7 +309,7 @@ export default function YoutubeViewer({
     }
   }, []);
 
-  // Mobile uses snap pagination — keep slide-change trigger for it
+  // Mobile snap mode: trigger when near the end of loaded slides
   const handleSlideChange = useCallback((swiper: SwiperType) => {
     const { fetchNextPage, hasNextPage, isFetchingNextPage } = fetchRef.current;
     const remaining = swiper.slides.length - swiper.activeIndex - 1;
@@ -270,7 +318,10 @@ export default function YoutubeViewer({
     }
   }, []);
 
-  if (!isLoading && !allVideos.length) return null;
+  if (!isLoading && allVideos.length === 0) return null;
+
+  const slideW = isMobile ? "80vw" : `${CARD_W}px`;
+  const slideMaxW = isMobile ? "320px" : `${CARD_W}px`;
 
   return (
     <section className="overflow-hidden">
@@ -288,104 +339,84 @@ export default function YoutubeViewer({
       </div>
 
       {isLoading ? (
-        // No SSR data — client is fetching page 1, show skeleton row
-        <div className="flex gap-5 overflow-hidden px-6">
-          {[0, 1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="shrink-0 rounded-2xl overflow-hidden bg-muted"
-              style={{ width: CARD_W }}
-            >
-              <div className="w-full relative" style={{ aspectRatio: "9/16" }}>
-                <SkeletonBlock className="absolute inset-0 rounded-none rounded-t-2xl" />
-              </div>
-              <div className="p-[14px_16px_18px] space-y-2">
-                <SkeletonBlock className="w-16 h-5 rounded-md" />
-                <SkeletonBlock className="h-[18px]" />
-                <SkeletonBlock className="h-[18px]" />
-                <SkeletonBlock className="h-[18px] w-3/5" />
-              </div>
-            </div>
-          ))}
-        </div>
+        // No SSR data — client is fetching page 1
+        <SkeletonRow isMobile={isMobile} />
       ) : !mounted ? (
-        // SSR data available — render static card row before Swiper hydrates to avoid flash
+        // SSR data available but Swiper not yet hydrated — static row avoids flash
         <div className="flex gap-5 overflow-hidden px-6">
           {allVideos.slice(0, 4).map((post) => (
             <div
               key={post.id}
-              className="shrink-0 rounded-2xl overflow-hidden bg-muted"
-              style={{ width: CARD_W }}
+              className="shrink-0"
+              style={{ width: CARD_W, maxWidth: CARD_W }}
             >
-              <VideoCard post={post} playing={false} onPlay={() => {}} shortsLabel={shortsLabel} />
+              <VideoCard
+                post={post}
+                playing={false}
+                onPlay={() => {}}
+                shortsLabel={shortsLabel}
+              />
             </div>
           ))}
         </div>
       ) : (
-        <div className="yt-swiper">
-          <Swiper
-            modules={isMobile ? [Pagination] : [FreeMode]}
-            onProgress={handleProgress}
-            onSlideChange={handleSlideChange}
-            slidesPerView="auto"
-            touchRatio={1}
-            resistance
-            a11y={{ enabled: true }}
-            {...(isMobile
-              ? {
-                  centeredSlides: true,
-                  spaceBetween: 16,
-                  grabCursor: false,
-                  resistanceRatio: 0.6,
-                  freeMode: false,
-                  pagination: { clickable: true },
-                }
-              : {
-                  centeredSlides: false,
-                  spaceBetween: 20,
-                  grabCursor: true,
-                  resistanceRatio: 0.85,
-                  freeMode: {
-                    enabled: true,
-                    momentum: true,
-                    momentumRatio: 0.6,
-                    momentumVelocityRatio: 0.8,
-                  },
-                  pagination: false,
-                })}
-          >
-            {allVideos.map((post) => (
-              <SwiperSlide
-                key={post.id}
-                style={{
-                  width: isMobile ? "80vw" : `${CARD_W}px`,
-                  maxWidth: isMobile ? "320px" : `${CARD_W}px`,
-                  height: "auto",
-                }}
-              >
-                {/* group enables group-hover:scale on thumbnail inside VideoCard */}
-                <div className="group h-full">
-                  <VideoCard
-                    post={post}
-                    playing={activeId === post.id}
-                    onPlay={() => setActiveId(post.id)}
-                    shortsLabel={shortsLabel}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-
-            {isFetchingNextPage &&
-              [0, 1, 2].map((i) => (
+        <>
+          <div className="yt-swiper">
+            <Swiper
+              modules={isMobile ? [Pagination] : [FreeMode]}
+              slidesPerView="auto"
+              spaceBetween={isMobile ? 16 : 20}
+              centeredSlides={isMobile}
+              grabCursor={!isMobile}
+              resistance={true}
+              resistanceRatio={isMobile ? 0.6 : 0.85}
+              touchRatio={1}
+              freeMode={
+                isMobile
+                  ? false
+                  : { enabled: true, momentum: true, momentumRatio: 0.6, momentumVelocityRatio: 0.8 }
+              }
+              pagination={isMobile ? { clickable: true } : false}
+              a11y={{ enabled: true }}
+              onSwiper={(s) => { swiperRef.current = s; }}
+              onProgress={handleProgress}
+              onSlideChange={handleSlideChange}
+            >
+              {allVideos.map((post) => (
                 <SwiperSlide
-                  key={`sk-${i}`}
-                  style={{ width: `${CARD_W}px`, height: "auto" }}
+                  key={post.id}
+                  style={{ width: slideW, maxWidth: slideMaxW }}
                 >
-                  <VideoCardSkeleton />
+                  {/* .group enables group-hover:scale on the thumbnail */}
+                  <div className="group">
+                    <VideoCard
+                      post={post}
+                      playing={activeId === post.id}
+                      onPlay={() => setActiveId(post.id)}
+                      shortsLabel={shortsLabel}
+                    />
+                  </div>
                 </SwiperSlide>
               ))}
-          </Swiper>
-        </div>
+            </Swiper>
+          </div>
+
+          {/* Loading-more skeletons live OUTSIDE the Swiper so appending them
+              never triggers swiper.update() and never shifts the scroll position */}
+          {isFetchingNextPage && (
+            <div className="flex gap-5 overflow-hidden px-6 mt-5">
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  className="shrink-0"
+                  style={{ width: slideW, maxWidth: slideMaxW }}
+                >
+                  <VideoCardSkeleton />
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </section>
   );

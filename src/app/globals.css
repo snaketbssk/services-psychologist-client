@@ -208,6 +208,11 @@
   overflow: visible;
 }
 
+/* Prevent Swiper from equalizing slide heights — each card sizes to its own content */
+.yt-swiper .swiper-wrapper {
+  align-items: flex-start;
+}
+
 /* Pagination dots */
 .yt-swiper .swiper-pagination {
   bottom: 0;

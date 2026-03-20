@@ -1,9 +1,11 @@
 // Server Component — no "use client"
-import { getLaunch, type ILaunchResponse } from "@/lib/service-psychologist";
+import { getLaunch } from "@/lib/service-psychologist";
 import YoutubeViewer, { type VideoPost } from "./YoutubeViewer";
 
-function mapVideos(data: ILaunchResponse): VideoPost[] {
-  return (data.videos?.values ?? []).map((v) => ({
+function mapVideos(
+  values: NonNullable<Awaited<ReturnType<typeof getLaunch>>["data"]["videos"]>["values"]
+): VideoPost[] {
+  return values.map((v) => ({
     id: String(v.id),
     day: v.day,
     month: v.month,
@@ -16,15 +18,17 @@ function mapVideos(data: ILaunchResponse): VideoPost[] {
 export default async function YoutubeViewerSection() {
   try {
     const res = await getLaunch();
-    const videos = mapVideos(res.data);
+    const videosData = res.data.videos;
+
     return (
       <YoutubeViewer
-        initialPosts={videos}
-        totalCount={res.data.videos?.totalCount ?? 0}
+        initialPosts={videosData ? mapVideos(videosData.values) : []}
+        totalCount={videosData?.totalCount ?? 0}
       />
     );
   } catch (error) {
-    console.error("[YoutubeViewerSection] Failed to fetch launch:", error);
+    console.error("[YoutubeViewerSection] Failed to fetch launch data:", error);
+    // Render client-side fallback — YoutubeViewer will fetch page 1 from the browser
     return <YoutubeViewer initialPosts={[]} totalCount={0} />;
   }
 }
