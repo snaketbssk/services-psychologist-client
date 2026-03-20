@@ -58,6 +58,8 @@
   --font-heading:    var(--font-roboto-slab);
   --font-decorative: var(--font-playfair);
   --font-mono:       var(--font-geist-mono);
+
+
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -191,6 +193,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.720 0.095 58);
 }
+
 
 /* ─────────────────────────────────────────────────────────────────────────────
    YOUTUBE VIEWER — Swiper overrides
