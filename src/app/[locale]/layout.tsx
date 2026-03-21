@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import QueryProvider from "@/providers/QueryProvider";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 /* ─── Metadata ────────────────────────────────────────────────────────────── */
 
@@ -27,6 +31,8 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as "en" | "ru" | "am")) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 

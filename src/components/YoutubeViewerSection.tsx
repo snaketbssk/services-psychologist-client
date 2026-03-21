@@ -1,4 +1,5 @@
 // Server Component — no "use client"
+import { getLocale } from "next-intl/server";
 import { getLaunch } from "@/lib/service-psychologist";
 import YoutubeViewer, { type VideoPost } from "./YoutubeViewer";
 
@@ -16,8 +17,9 @@ function mapVideos(
 }
 
 export default async function YoutubeViewerSection() {
+  const locale = await getLocale();
   try {
-    const res = await getLaunch();
+    const res = await getLaunch(undefined, locale);
     const videosData = res.data.videos;
 
     return (

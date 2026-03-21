@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -11,7 +12,13 @@ import YoutubeViewerSection from "@/components/YoutubeViewerSection";
 import AnimateIn from "@/components/AnimateIn";
 import SiteFooter from "@/components/SiteFooter";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <div className="bg-background">
       <SiteHeader />

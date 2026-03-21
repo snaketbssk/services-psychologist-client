@@ -2,7 +2,7 @@
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getVideos } from "@/lib/service-psychologist";
 import { cn } from "@/lib/utils";
 
@@ -220,6 +220,7 @@ export default function YoutubeViewer({
   heading,
   subheading,
 }: YoutubeViewerProps) {
+  const locale = useLocale();
   const t = useTranslations("YOUTUBE_VIEWER");
   const resolvedEyebrow    = eyebrow    ?? t("EYEBROW");
   const resolvedHeading    = heading    ?? t("HEADING");
@@ -246,7 +247,7 @@ export default function YoutubeViewer({
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery<PagedVideosResponse>({
-      queryKey: ["videos"],
+      queryKey: ["videos", locale],
       queryFn: ({ pageParam }) => fetchVideosPage(pageParam as number),
       initialPageParam: hasSSR ? 2 : 1,
       getNextPageParam: (lastPage, _allPages, lastPageParam) => {

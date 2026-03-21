@@ -48,8 +48,10 @@ export const postConsultation = (
 
 export const getLaunch = (
   params?: ILaunchFilter,
+  locale?: string,
   cancelToken?: CancelToken
-): Promise<AxiosResponse<ILaunchResponse>> => apiClient.get("launch", params, cancelToken);
+): Promise<AxiosResponse<ILaunchResponse>> =>
+  apiClient.get("launch", params, cancelToken, locale ? { "X-Language": locale } : undefined);
 
 export const getVideos = (
   params: IVideosFilter,

@@ -17,7 +17,16 @@
       "Bash(npx shadcn@latest add dialog)",
       "Bash(cd:*)",
       "mcp__ide__getDiagnostics",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(curl -v http://localhost:3000/)",
+      "Bash(curl -v http://localhost:3000/en)",
+      "Bash(curl:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd //c \"taskkill /PID 43952 /F\" 2>&1)",
+      "Bash(grep -E \"\\\\.\\(ts|tsx|js|jsx\\)$\")",
+      "Bash(find C:/Users/snake/source/repos/service-psy/services-psychologist-client/node_modules/next-intl -type f -name *.md -exec grep -l \"layout\\\\|setRequestLocale\\\\|App Router\" {})",
+      "Bash(2)",
+      "Bash(grep -r [locale] C:/Users/snake/source/repos/service-psy/services-psychologist-client/node_modules/next-intl/dist --include=*.js --include=*.d.ts)"
     ]
   }
 }

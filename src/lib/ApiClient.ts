@@ -9,12 +9,12 @@ import { IConfiguration } from "@/types";
 import queryParamsBuilder from "@/lib/queryParamsBuilder";
 
 export interface IServiceApi {
-  post(url: string, body: any, cancelToken?: CancelToken): Promise<AxiosResponse>;
+  post(url: string, body: any, cancelToken?: CancelToken, headers?: Record<string, string>): Promise<AxiosResponse>;
   postForm(url: string, formData: FormData, cancelToken?: CancelToken): Promise<AxiosResponse>;
   put(url: string, body: any, cancelToken?: CancelToken): Promise<AxiosResponse>;
   putForm(url: string, formData: FormData, cancelToken?: CancelToken): Promise<AxiosResponse>;
   patch(url: string, body: any, cancelToken?: CancelToken): Promise<AxiosResponse>;
-  get(url: string, params?: any, cancelToken?: CancelToken): Promise<AxiosResponse>;
+  get(url: string, params?: any, cancelToken?: CancelToken, headers?: Record<string, string>): Promise<AxiosResponse>;
   delete(url: string, data: any, cancelToken?: CancelToken): Promise<AxiosResponse>;
 }
 
@@ -26,8 +26,12 @@ export class ServiceApi implements IServiceApi {
 
     if (!interceptors) return;
 
-    // Request interceptor — add auth headers here when authentication is implemented
+    // Request interceptor — on the client side, auto-inject X-Language from the URL locale segment
     this.instance.interceptors.request.use((config: InternalAxiosRequestConfig<any>) => {
+      if (typeof window !== "undefined") {
+        const locale = window.location.pathname.split("/")[1] || "en";
+        config.headers["X-Language"] = locale;
+      }
       return config;
     });
 
@@ -38,8 +42,8 @@ export class ServiceApi implements IServiceApi {
     );
   }
 
-  post(url: string, body: any, cancelToken?: CancelToken): Promise<AxiosResponse> {
-    return this.instance.post(url, body, { cancelToken });
+  post(url: string, body: any, cancelToken?: CancelToken, headers?: Record<string, string>): Promise<AxiosResponse> {
+    return this.instance.post(url, body, { cancelToken, headers });
   }
 
   postForm(url: string, formData: FormData, cancelToken?: CancelToken): Promise<AxiosResponse> {
@@ -64,9 +68,9 @@ export class ServiceApi implements IServiceApi {
     return this.instance.patch(url, body, { cancelToken });
   }
 
-  get(url: string, params?: any, cancelToken?: CancelToken): Promise<AxiosResponse> {
+  get(url: string, params?: any, cancelToken?: CancelToken, headers?: Record<string, string>): Promise<AxiosResponse> {
     const queryString = params ? `?${queryParamsBuilder(params)}` : "";
-    return this.instance.get(`${url}${queryString}`, { cancelToken });
+    return this.instance.get(`${url}${queryString}`, { cancelToken, headers });
   }
 
   delete(url: string, data: any, cancelToken?: CancelToken): Promise<AxiosResponse> {
