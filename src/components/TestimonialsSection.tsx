@@ -1,11 +1,9 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimateIn from "@/components/AnimateIn";
 
-export default function TestimonialsSection() {
-  const t = useTranslations("TESTIMONIALS_SECTION");
+export default async function TestimonialsSection() {
+  const t = await getTranslations("TESTIMONIALS_SECTION");
 
   const testimonials = [
     { quoteKey: "T1_QUOTE", nameKey: "T1_NAME", roleKey: "T1_ROLE", initials: "S.M." },

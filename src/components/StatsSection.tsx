@@ -1,10 +1,8 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import AnimateIn from "@/components/AnimateIn";
 
-export default function StatsSection() {
-  const t = useTranslations("STATS_SECTION");
+export default async function StatsSection() {
+  const t = await getTranslations("STATS_SECTION");
 
   const stats = [
     { value: "20+", labelKey: "YEARS_EXP"     },

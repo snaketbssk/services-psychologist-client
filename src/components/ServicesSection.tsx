@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import {
   Card,
   CardHeader,
@@ -10,8 +8,8 @@ import {
 } from "@/components/ui/card";
 import AnimateIn from "@/components/AnimateIn";
 
-export default function ServicesSection() {
-  const t = useTranslations("SERVICES_SECTION");
+export default async function ServicesSection() {
+  const t = await getTranslations("SERVICES_SECTION");
 
   const services = [
     { icon: "🧠", titleKey: "INDIVIDUAL_TITLE", descKey: "INDIVIDUAL_DESC" },

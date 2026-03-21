@@ -1,12 +1,10 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import BookConsultationDialog from "@/components/BookConsultationDialog";
 import AnimateIn from "@/components/AnimateIn";
 
-export default function AboutSection() {
-  const t = useTranslations("ABOUT_SECTION");
+export default async function AboutSection() {
+  const t = await getTranslations("ABOUT_SECTION");
 
   const checklistKeys = ["CHECK_1", "CHECK_2", "CHECK_3", "CHECK_4"] as const;
 

@@ -1,13 +1,11 @@
-"use client";
-
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimateIn from "@/components/AnimateIn";
 
-export default function BlogSection() {
-  const t = useTranslations("BLOG_SECTION");
+export default async function BlogSection() {
+  const t = await getTranslations("BLOG_SECTION");
 
   const articles = [
     { dateKey: "A1_DATE", categoryKey: "A1_CATEGORY", titleKey: "A1_TITLE", excerptKey: "A1_EXCERPT" },

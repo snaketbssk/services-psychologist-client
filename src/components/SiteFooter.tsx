@@ -1,13 +1,11 @@
-"use client";
-
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 
 const socialIcons = ["f", "in", "tw", "ig", "yt"];
 
-export default function SiteFooter() {
-  const t = useTranslations("FOOTER");
+export default async function SiteFooter() {
+  const t = await getTranslations("FOOTER");
 
   const serviceLinks = [
     t("SERVICE_INDIVIDUAL"),

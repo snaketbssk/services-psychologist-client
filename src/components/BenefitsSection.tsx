@@ -1,10 +1,8 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import AnimateIn from "@/components/AnimateIn";
 
-export default function BenefitsSection() {
-  const t = useTranslations("BENEFITS_SECTION");
+export default async function BenefitsSection() {
+  const t = await getTranslations("BENEFITS_SECTION");
 
   const benefits = [
     { icon: "🏆", titleKey: "PSYCHOLOGISTS_TITLE", descKey: "PSYCHOLOGISTS_DESC" },

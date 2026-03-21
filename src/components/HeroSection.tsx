@@ -1,12 +1,10 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import AnimateIn from "@/components/AnimateIn";
 import BookConsultationDialog from "@/components/BookConsultationDialog";
 
-export default function HeroSection() {
-  const t = useTranslations("HERO");
+export default async function HeroSection() {
+  const t = await getTranslations("HERO");
 
   return (
     <section className="bg-background py-20 lg:py-28 px-6">
