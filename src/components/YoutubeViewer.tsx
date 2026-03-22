@@ -371,6 +371,7 @@ export default function YoutubeViewer({
               spaceBetween={isMobile ? 16 : 20}
               centeredSlides={isMobile}
               grabCursor={!isMobile}
+              slidesOffsetBefore={isMobile ? 0 : 24}
               resistance={true}
               resistanceRatio={isMobile ? 0.6 : 0.85}
               touchRatio={1}
