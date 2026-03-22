@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
-
-const socialIcons = ["f", "in", "tw", "ig", "yt"];
+import { SOCIAL_LINKS } from "@/lib/social-links";
 
 export default async function SiteFooter() {
   const t = await getTranslations("FOOTER");
@@ -33,14 +32,16 @@ export default async function SiteFooter() {
             <span className="font-heading text-xl font-bold text-foreground">Healingy</span>
             <p className="text-foreground/60 text-sm mt-3 leading-relaxed">{t("DESCRIPTION")}</p>
             <div className="flex items-center gap-2 mt-6">
-              {socialIcons.map((icon) => (
+              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
                 <a
-                  key={icon}
-                  href="#"
-                  aria-label={icon}
-                  className="w-8 h-8 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors flex items-center justify-center text-xs text-foreground font-bold"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-8 h-8 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors flex items-center justify-center text-foreground"
                 >
-                  {icon}
+                  <Icon />
                 </a>
               ))}
             </div>

@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { postConsultation, type IConsultationRequest } from "@/lib/service-psychologist";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { PHONE_NUMBER, EMAIL } from "@/lib/constants";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -120,8 +121,8 @@ function ArrowRightIcon() {
 }
 
 const CONTACT_INFO = [
-  { id: "email", label: "themesflat@gmail.com", Icon: EmailIcon },
-  { id: "phone", label: "1-333-345-6868", Icon: PhoneIcon },
+  { id: "email", label: EMAIL, Icon: EmailIcon },
+  { id: "phone", label: PHONE_NUMBER, Icon: PhoneIcon },
   {
     id: "address",
     label: "101 E 129th St, East Chicago, IN 46312, US",
@@ -238,7 +239,7 @@ export default function BookConsultation() {
       {/* ── Right card ────────────────────────────────────────────────────── */}
       <div className="bg-background rounded-xl md:rounded-2xl px-4 py-5 sm:px-6 sm:py-7 md:px-8 md:py-9 shadow-[0_2px_24px_rgb(0_0_0/7%)]">
         <h3 className="font-heading font-normal text-xl md:text-[26px] text-foreground text-center mb-5 md:mb-[26px]">
-          Get A Free Consultation
+          {t("CARD_TITLE")}
         </h3>
 
         <form
