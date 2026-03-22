@@ -1,30 +1,17 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Badge } from "@/components/ui/badge";
 import AnimateIn from "@/components/AnimateIn";
+import type { IBlogDto } from "@/lib/service-psychologist";
 
-const VALID_IDS = ["1", "2", "3"] as const;
-type ArticleId = (typeof VALID_IDS)[number];
+interface BlogDetailProps {
+  blog: IBlogDto;
+}
 
-const ARTICLE_MAP: Record<
-  ArticleId,
-  { dateKey: string; categoryKey: string; titleKey: string; excerptKey: string; contentKey: string }
-> = {
-  "1": { dateKey: "A1_DATE", categoryKey: "A1_CATEGORY", titleKey: "A1_TITLE", excerptKey: "A1_EXCERPT", contentKey: "A1_CONTENT" },
-  "2": { dateKey: "A2_DATE", categoryKey: "A2_CATEGORY", titleKey: "A2_TITLE", excerptKey: "A2_EXCERPT", contentKey: "A2_CONTENT" },
-  "3": { dateKey: "A3_DATE", categoryKey: "A3_CATEGORY", titleKey: "A3_TITLE", excerptKey: "A3_EXCERPT", contentKey: "A3_CONTENT" },
-};
-
-export default async function BlogDetail({ id }: { id: string }) {
-  if (!VALID_IDS.includes(id as ArticleId)) notFound();
-
-  const article = ARTICLE_MAP[id as ArticleId];
-  const t = await getTranslations("BLOG_SECTION");
+export default async function BlogDetail({ blog }: BlogDetailProps) {
   const tDetail = await getTranslations("BLOG_DETAIL");
 
-  const content = t(article.contentKey as Parameters<typeof t>[0]);
-  const paragraphs = content.split("\n\n").filter(Boolean);
+  const paragraphs = blog.content.split("\n\n").filter(Boolean);
 
   return (
     <article className="max-w-3xl mx-auto">
@@ -38,15 +25,15 @@ export default async function BlogDetail({ id }: { id: string }) {
 
         <div className="mt-6">
           <Badge variant="secondary" className="mb-4">
-            {t(article.categoryKey)}
+            {blog.category}
           </Badge>
 
           <h1 className="font-heading text-4xl font-bold text-foreground leading-tight mb-3">
-            {t(article.titleKey)}
+            {blog.title}
           </h1>
 
           <p className="text-muted-foreground text-sm mb-8">
-            {t(article.dateKey)} · {tDetail("READ_TIME")}
+            {new Date(blog.date).toLocaleDateString()} · {tDetail("READ_TIME")}
           </p>
         </div>
       </AnimateIn>
@@ -60,7 +47,7 @@ export default async function BlogDetail({ id }: { id: string }) {
       <AnimateIn variant="fade-up" delay={200}>
         <div className="space-y-5">
           <p className="text-muted-foreground text-base leading-relaxed font-medium">
-            {t(article.excerptKey)}
+            {blog.excerpt}
           </p>
           {paragraphs.map((para, i) => (
             <p key={i} className="text-foreground text-base leading-relaxed">

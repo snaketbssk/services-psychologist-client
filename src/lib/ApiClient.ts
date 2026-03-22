@@ -7,6 +7,7 @@ import axios, {
 } from "axios";
 import { IConfiguration } from "@/types";
 import queryParamsBuilder from "@/lib/queryParamsBuilder";
+import https from "https";
 
 export interface IServiceApi {
   post(url: string, body: any, cancelToken?: CancelToken, headers?: Record<string, string>): Promise<AxiosResponse>;
@@ -22,7 +23,12 @@ export class ServiceApi implements IServiceApi {
   instance: AxiosInstance;
 
   constructor({ baseURL, interceptors }: IConfiguration) {
-    this.instance = axios.create({ baseURL });
+    const httpsAgent =
+      typeof window === "undefined" && process.env.NODE_ENV !== "production"
+        ? new https.Agent({ rejectUnauthorized: false })
+        : undefined;
+
+    this.instance = axios.create({ baseURL, httpsAgent });
 
     if (!interceptors) return;
 

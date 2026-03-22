@@ -37,7 +37,9 @@
       "mcp__playwright__browser_evaluate",
       "Bash(grep -r \"IVideoItem\\\\|IPagedVideos\\\\|VideoPost\" C:Userssnakesourcereposservice-psyservices-psychologist-client/src --include=*.ts --include=*.tsx)",
       "Bash(find C:Userssnakesourcereposservice-psyservices-psychologist-client -maxdepth 2 -type f \\\\\\(-name *.json -o -name *.config.* \\\\\\))",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(xargs -I {} basename {})",
+      "mcp__playwright__browser_click"
     ]
   }
 }
