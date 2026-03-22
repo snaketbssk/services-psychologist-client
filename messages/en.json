@@ -136,14 +136,26 @@
     "A1_CATEGORY": "Therapy",
     "A1_TITLE": "How Cognitive Behavioral Therapy Can Help Manage Anxiety",
     "A1_EXCERPT": "Discover how CBT techniques empower you to identify and reframe negative thought patterns, reducing anxiety in everyday situations.",
+    "A1_CONTENT": "Cognitive Behavioral Therapy (CBT) is one of the most well-researched treatments for anxiety. It works by helping you identify negative thought patterns and replace them with healthier, more balanced perspectives. Over time, this practice rewires how your brain responds to stress and uncertainty.\n\nA trained therapist guides you through a structured process of examining your thoughts, understanding how they affect your feelings and behavior, and developing practical coping strategies. Techniques may include journaling, breathing exercises, and gradual exposure to feared situations in a safe environment.\n\nMany clients experience meaningful improvement within 8 to 20 sessions. Whether you struggle with social anxiety, generalized worry, or panic attacks, CBT offers evidence-backed tools that you can use long after therapy ends.",
     "A2_DATE": "10 Mar",
     "A2_CATEGORY": "Wellness",
     "A2_TITLE": "Understanding the Connection Between Sleep and Mental Health",
     "A2_EXCERPT": "Explore the powerful two-way relationship between quality sleep and emotional resilience, and learn practical steps to improve both.",
+    "A2_CONTENT": "The connection between sleep and mental health runs in both directions. When we sleep poorly, our emotional regulation suffers, making us more reactive to stress and less able to find perspective. When we are struggling with anxiety or depression, sleep often becomes disrupted, creating a cycle that can feel impossible to break.\n\nResearch consistently shows that adults who sleep 7 to 9 hours per night have significantly better mental health outcomes. During sleep, the brain consolidates memories, processes emotions, and clears metabolic waste that accumulates during waking hours. Prioritizing sleep is one of the most powerful investments you can make in your psychological well-being.\n\nPractical steps include maintaining a consistent sleep schedule, limiting caffeine after midday, reducing screen exposure in the hour before bed, and creating a calming bedtime routine. If sleep difficulties persist despite good habits, speaking with a therapist can help identify and address underlying anxiety or other contributing factors.",
     "A3_DATE": "05 Mar",
     "A3_CATEGORY": "Mindfulness",
     "A3_TITLE": "5 Mindfulness Practices for Daily Stress Relief",
-    "A3_EXCERPT": "Simple, evidence-backed mindfulness exercises you can integrate into your daily routine to reduce stress and improve overall well-being."
+    "A3_EXCERPT": "Simple, evidence-backed mindfulness exercises you can integrate into your daily routine to reduce stress and improve overall well-being.",
+    "A3_CONTENT": "Mindfulness practice does not require you to empty your mind or achieve a state of perfect calm. It simply asks you to pay attention to the present moment, intentionally and without judgment. Even a few minutes a day of consistent practice can produce measurable reductions in stress, improved focus, and greater emotional resilience.\n\nHere are five practices to get you started. Mindful breathing: set a timer for five minutes each morning and bring your full attention to the sensations of breathing. Mindful walking: during your next walk, feel each step, notice sounds, and observe your surroundings without labeling them good or bad. Body scan: lie down, close your eyes, and slowly move your awareness through each part of your body, releasing tension as you go. Gratitude journaling: each evening, write three specific things you appreciated about your day. Mindful eating: at one meal each day, put away all devices, eat slowly, and fully savor each bite.\n\nStart with just one practice for two weeks. Small, consistent effort builds the mindfulness habit more reliably than occasional long sessions."
+  },
+
+  "BLOG_LIST": {
+    "DESCRIPTION": "Explore our latest articles, tips, and resources on mental health and well-being."
+  },
+
+  "BLOG_DETAIL": {
+    "BACK_TO_BLOG": "Back to Blog",
+    "READ_TIME": "5 min read"
   },
 
   "YOUTUBE_VIEWER": {

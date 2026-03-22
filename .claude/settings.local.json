@@ -27,7 +27,14 @@
       "Bash(find C:/Users/snake/source/repos/service-psy/services-psychologist-client/node_modules/next-intl -type f -name *.md -exec grep -l \"layout\\\\|setRequestLocale\\\\|App Router\" {})",
       "Bash(2)",
       "Bash(grep -r [locale] C:/Users/snake/source/repos/service-psy/services-psychologist-client/node_modules/next-intl/dist --include=*.js --include=*.d.ts)",
-      "mcp__context7__resolve-library-id"
+      "mcp__context7__resolve-library-id",
+      "Bash(find . -type f -name *blog* -o -name *details*)",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_hover",
+      "mcp__playwright__browser_evaluate"
     ]
   }
 }

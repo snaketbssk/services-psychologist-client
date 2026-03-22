@@ -357,7 +357,7 @@ export default function SiteHeader({
       mega: true,
       megaTitle: nav("BLOGS_MEGA_TITLE"),
       children: [
-        { label: nav("BLOG_GRID"),     href: "/blog-grid"      },
+        { label: nav("BLOG_GRID"),     href: "/blogs"          },
         { label: nav("BLOG_DETAILS_1"), href: "/blog-details"  },
         { label: nav("BLOG_DETAILS_2"), href: "/blog-details-2" },
       ],
