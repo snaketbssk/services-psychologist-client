@@ -16,10 +16,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export interface VideoPost {
   id: string;
-  day: string;
-  month: string;
+  date: string;
   category: string;
   title: string;
+  description: string;
   videoId: string;
 }
 
@@ -46,10 +46,10 @@ async function fetchVideosPage(pageNumber: number): Promise<PagedVideosResponse>
     totalCount: res.data.totalCount,
     values: res.data.values.map((v) => ({
       id: String(v.id),
-      day: v.day,
-      month: v.month,
+      date: v.date,
       category: v.category ?? "Shorts",
       title: v.title,
+      description: v.description,
       videoId: v.videoId,
     })),
   };
@@ -125,10 +125,14 @@ interface VideoCardProps {
   playing: boolean;
   onPlay: () => void;
   shortsLabel: string;
+  locale: string;
 }
 
-function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
+function VideoCard({ post, playing, onPlay, shortsLabel, locale }: VideoCardProps) {
   const catBg = CATEGORY_COLORS[post.category] ?? "#F5C5A3";
+  const dateObj = new Date(post.date);
+  const day = dateObj.getDate();
+  const month = dateObj.toLocaleString(locale, { month: "short" }).toUpperCase();
 
   return (
     <div className="flex flex-col rounded-2xl overflow-hidden bg-muted">
@@ -165,9 +169,9 @@ function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
 
             {/* Date badge */}
             <div className="absolute top-3.5 left-3.5 z-10 bg-foreground text-background rounded-lg px-2.5 py-1.5 text-center leading-tight min-w-[44px] select-none">
-              <p className="text-base font-bold leading-none">{post.day}</p>
+              <p className="text-base font-bold leading-none">{day}</p>
               <p className="text-[10px] font-semibold tracking-[0.06em] uppercase mt-0.5">
-                {post.month}
+                {month}
               </p>
             </div>
 
@@ -358,6 +362,7 @@ export default function YoutubeViewer({
                 playing={false}
                 onPlay={() => {}}
                 shortsLabel={shortsLabel}
+                locale={locale}
               />
             </div>
           ))}
@@ -397,6 +402,7 @@ export default function YoutubeViewer({
                       playing={activeId === post.id}
                       onPlay={() => setActiveId(post.id)}
                       shortsLabel={shortsLabel}
+                      locale={locale}
                     />
                   </div>
                 </SwiperSlide>

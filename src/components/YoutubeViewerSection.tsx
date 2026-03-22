@@ -8,10 +8,10 @@ function mapVideos(
 ): VideoPost[] {
   return values.map((v) => ({
     id: String(v.id),
-    day: v.day,
-    month: v.month,
+    date: v.date,
     category: v.category ?? "Shorts",
     title: v.title,
+    description: v.description,
     videoId: v.videoId,
   }));
 }

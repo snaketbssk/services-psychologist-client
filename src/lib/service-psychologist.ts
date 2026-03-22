@@ -23,10 +23,10 @@ export interface IVideosFilter {
 
 export interface IVideoItem {
   id: number | string;
-  day: string;
-  month: string;
+  date: string;
   category?: string;
   title: string;
+  description: string;
   videoId: string;
 }
 
