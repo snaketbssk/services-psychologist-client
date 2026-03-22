@@ -1,7 +1,6 @@
 "use client";
 
 import { useMutation } from "@tanstack/react-query";
-import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { postConsultation, type IConsultationRequest } from "@/lib/service-psychologist";
@@ -90,44 +89,10 @@ function PhoneIcon() {
     </svg>
   );
 }
-function LocationIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 20 20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-    >
-      <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z" />
-      <circle cx="10" cy="8" r="2" />
-    </svg>
-  );
-}
-function ArrowRightIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
-      <path d="M3 8h10M9 4l4 4-4 4" />
-    </svg>
-  );
-}
 
 const CONTACT_INFO = [
   { id: "email", label: EMAIL, Icon: EmailIcon },
   { id: "phone", label: PHONE_NUMBER, Icon: PhoneIcon },
-  {
-    id: "address",
-    label: "101 E 129th St, East Chicago, IN 46312, US",
-    Icon: LocationIcon,
-  },
 ] as const;
 
 // ─── Shared input class ───────────────────────────────────────────────────────
@@ -226,14 +191,6 @@ export default function BookConsultation() {
           ))}
         </ul>
 
-        {/* Open map link */}
-        <Link
-          href="/contact-us"
-          className="group inline-flex items-center gap-[7px] text-[13px] md:text-[14px] font-semibold text-foreground no-underline transition-[gap] duration-200 hover:gap-3"
-        >
-          {t("OPEN_MAP")}
-          <ArrowRightIcon />
-        </Link>
       </div>
 
       {/* ── Right card ────────────────────────────────────────────────────── */}

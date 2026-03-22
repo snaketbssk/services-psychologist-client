@@ -2,6 +2,7 @@ import AnimateIn from "@/components/AnimateIn";
 import BookConsultationDialog from "@/components/BookConsultationDialog";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
+import { STATS } from "@/lib/constants";
 
 export default async function HeroSection() {
   const t = await getTranslations("HERO");
@@ -42,7 +43,7 @@ export default async function HeroSection() {
 
             <div className="absolute -bottom-4 left-6 bg-background rounded-xl shadow-sm px-4 py-2 flex flex-col items-center">
               <span className="font-heading font-bold text-primary text-lg leading-tight">
-                20+
+                {STATS[0].value}
               </span>
               <span className="text-xs text-muted-foreground">
                 {t("YEARS")}
@@ -51,7 +52,7 @@ export default async function HeroSection() {
 
             <div className="absolute -top-4 right-6 bg-background rounded-xl shadow-sm px-4 py-2 flex flex-col items-center">
               <span className="font-heading font-bold text-primary text-lg leading-tight">
-                2K+
+                {STATS[1].value}
               </span>
               <span className="text-xs text-muted-foreground">
                 {t("CLIENTS")}
