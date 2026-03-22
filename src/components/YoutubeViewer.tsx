@@ -9,8 +9,7 @@ import { cn } from "@/lib/utils";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -78,7 +77,7 @@ function VideoCardSkeleton() {
       <div className="w-full relative" style={{ aspectRatio: "9/16" }}>
         <SkeletonBlock className="absolute inset-0 rounded-none rounded-t-2xl" />
       </div>
-      <div className="p-[14px_16px_18px] space-y-2 min-h-[108px]">
+      <div className="p-4 space-y-2 min-h-[108px]">
         <SkeletonBlock className="w-16 h-5 rounded-md" />
         <SkeletonBlock className="h-[18px]" />
         <SkeletonBlock className="h-[18px]" />
@@ -186,9 +185,9 @@ function VideoCard({ post, playing, onPlay, shortsLabel }: VideoCardProps) {
       </div>
 
       {/* Card body */}
-      <div className="p-[14px_16px_18px] grow min-h-[108px]">
+      <div className="p-4 grow min-h-[108px]">
         <span
-          className="inline-block px-2.5 py-[3px] rounded-md text-[10px] font-bold tracking-[0.1em] uppercase text-foreground mb-3"
+          className="inline-block px-2.5 py-[3px] rounded-md text-xs font-bold tracking-[0.1em] uppercase text-foreground mb-3"
           style={{ backgroundColor: catBg }}
         >
           {post.category}
@@ -242,6 +241,7 @@ export default function YoutubeViewer({
   }, []);
 
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [mobileIndex, setMobileIndex] = useState(0);
 
   const hasSSR = initialPosts.length > 0;
 
@@ -312,6 +312,7 @@ export default function YoutubeViewer({
 
   // Mobile snap mode: trigger when near the end of loaded slides
   const handleSlideChange = useCallback((swiper: SwiperType) => {
+    setMobileIndex(swiper.activeIndex);
     const { fetchNextPage, hasNextPage, isFetchingNextPage } = fetchRef.current;
     const remaining = swiper.slides.length - swiper.activeIndex - 1;
     if (remaining <= 3 && hasNextPage && !isFetchingNextPage) {
@@ -321,6 +322,7 @@ export default function YoutubeViewer({
 
   if (!isLoading && allVideos.length === 0) return null;
 
+  const resolvedTotal = data?.pages[0]?.totalCount ?? totalCount;
   const slideW = isMobile ? "80vw" : `${CARD_W}px`;
   const slideMaxW = isMobile ? "320px" : `${CARD_W}px`;
 
@@ -328,13 +330,13 @@ export default function YoutubeViewer({
     <section className="overflow-hidden">
       {/* Header */}
       <div className="text-center mb-8 md:mb-12 px-6">
-        <p className="text-[11px] font-semibold tracking-[0.12em] uppercase text-muted-foreground mb-3">
+        <p className="text-xs font-semibold tracking-widest uppercase text-primary mb-3">
           {resolvedEyebrow}
         </p>
-        <h2 className="font-heading font-normal text-[28px] md:text-[38px] leading-[1.2] text-foreground mb-3">
+        <h2 className="font-heading font-bold text-3xl md:text-4xl leading-tight text-foreground mb-3">
           {resolvedHeading}
         </h2>
-        <p className="text-[14px] md:text-[15px] text-muted-foreground leading-[1.7] max-w-[460px] mx-auto">
+        <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-[460px] mx-auto">
           {resolvedSubheading}
         </p>
       </div>
@@ -364,7 +366,7 @@ export default function YoutubeViewer({
         <>
           <div className="yt-swiper">
             <Swiper
-              modules={isMobile ? [Pagination] : [FreeMode]}
+              modules={[FreeMode]}
               slidesPerView="auto"
               spaceBetween={isMobile ? 16 : 20}
               centeredSlides={isMobile}
@@ -377,7 +379,6 @@ export default function YoutubeViewer({
                   ? false
                   : { enabled: true, momentum: true, momentumRatio: 0.6, momentumVelocityRatio: 0.8 }
               }
-              pagination={isMobile ? { clickable: true } : false}
               a11y={{ enabled: true }}
               onSwiper={(s) => { swiperRef.current = s; }}
               onProgress={handleProgress}
@@ -402,6 +403,36 @@ export default function YoutubeViewer({
             </Swiper>
           </div>
 
+          {/* Mobile pagination dots */}
+          {isMobile && resolvedTotal > 0 && (
+            <div className="mt-5 flex flex-col items-center gap-2">
+              {/* Dots */}
+              <div className="flex items-center gap-1.5">
+                {Array.from({ length: Math.min(resolvedTotal, 7) }).map((_, i) => {
+                  const dotCount = Math.min(resolvedTotal, 7);
+                  const activeDot = Math.round(
+                    (mobileIndex / Math.max(resolvedTotal - 1, 1)) * (dotCount - 1)
+                  );
+                  const isActive = i === activeDot;
+                  return (
+                    <div
+                      key={i}
+                      className={cn(
+                        "rounded-full transition-all duration-300",
+                        isActive
+                          ? "w-2.5 h-2.5 bg-primary"
+                          : "w-2 h-2 bg-muted-foreground/30"
+                      )}
+                    />
+                  );
+                })}
+              </div>
+              {/* Counter */}
+              <p className="text-xs text-muted-foreground tabular-nums">
+                {mobileIndex + 1} / {resolvedTotal}
+              </p>
+            </div>
+          )}
         </>
       )}
     </section>
