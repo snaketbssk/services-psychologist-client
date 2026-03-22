@@ -27,7 +27,7 @@ export default async function AboutSection() {
         {/* RIGHT: Text content */}
         <AnimateIn variant="fade-left" duration={700} delay={150}>
         <div className="space-y-6">
-          <p className="text-primary text-sm font-medium tracking-widest uppercase">
+          <p className="text-subject text-sm font-medium tracking-widest uppercase">
             {t("EYEBROW")}
           </p>
           <h2 className="font-heading text-3xl font-bold text-foreground leading-snug">

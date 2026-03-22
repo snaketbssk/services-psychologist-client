@@ -48,7 +48,7 @@ export default function ServiceCard({
       )}
 
       <CardHeader className="pb-3">
-        <div className="mb-3 flex size-11 items-center justify-center rounded-xl bg-primary/10 text-2xl">
+        <div className="mb-3 flex size-11 items-center justify-center rounded-xl bg-subject/10 text-2xl">
           {icon}
         </div>
         <CardTitle className="font-heading text-lg">{title}</CardTitle>

@@ -1,0 +1,2459 @@
+[  139197ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  140054ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  140057ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/en?_rsc=gvxrb:0
+[  140114ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  140219ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[  140219ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/en?_rsc=gvxrb:0
+[  140254ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/en:0
+[  140528ms] Error: ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx
+
+
+    at <unknown> (Error: ./src/components/SiteHeader.tsx:629:7)
+    at Object.getCompilationErrors (file://C:\Users\snake\source\repos\service-psy\services-psychologist-client\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1189:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\snake\source\repos\service-psy\services-psychologist-client\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\snake\source\repos\service-psy\services-psychologist-client\node_modules\next\dist\server\dev\next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file://C:\Users\snake\source\repos\service-psy\services-psychologist-client\node_modules\next\dist\server\dev\next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\snake\source\repos\service-psy\services-psychologist-client\node_modules\next\dist\server\base-server.js:1745:26)
+[  140534ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140535ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/blogs/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140535ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/blogs/[id]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140642ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140705ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140776ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140842ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140903ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  140964ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141025ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141086ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141147ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141207ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141269ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141330ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141393ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141453ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141515ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141576ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141637ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141697ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141757ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141818ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141879ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  141940ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142001ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142062ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142123ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142183ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142245ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142305ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142366ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142427ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142489ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142550ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142611ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142672ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142732ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142793ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142853ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142915ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  142976ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143037ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143097ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143158ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143219ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143280ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143341ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143402ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143463ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143524ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143586ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143648ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143707ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143768ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143829ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143891ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  143952ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144013ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144075ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144138ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144200ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144261ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144322ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144383ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144446ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144507ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144566ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144628ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144687ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144748ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144809ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144871ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144932ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  144993ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145055ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145117ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145178ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145239ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145299ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145360ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145421ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145481ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145542ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145602ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145663ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145725ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145786ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145846ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145907ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  145968ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146029ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146091ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146151ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146213ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146274ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146334ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146396ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146455ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146516ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146577ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146637ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146697ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146757ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146818ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146879ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  146940ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147001ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147061ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147122ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147183ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147243ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147304ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147367ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147428ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147490ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147549ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147610ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147671ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147732ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147793ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147854ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147914ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  147976ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148036ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148098ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148159ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148220ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148281ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148342ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148404ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148464ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148525ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148586ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148647ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148709ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148769ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148831ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148892ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  148953ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149013ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149075ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149134ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149196ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149258ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149319ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149381ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  149443ms] [ERROR] ./src/components/SiteHeader.tsx:629:7
+Expression expected
+  627 |         </div>
+  628 |       </div>
+> 629 |     </>
+      |       ^
+  630 |   );
+  631 | }
+  632 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/SiteHeader.tsx
+    ./src/app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945

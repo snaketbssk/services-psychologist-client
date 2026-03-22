@@ -145,7 +145,7 @@ function MegaDropdown({ item, onClose, isActive, navbarBottom, whatsNewLabel }: 
                       key={child.label}
                       href={child.href}
                       onClick={onClose}
-                      className="block p-[14px_16px] rounded-[10px] border border-border no-underline transition-[border-color,background] duration-200 hover:border-primary hover:bg-primary/[0.04] group"
+                      className="block p-[14px_16px] rounded-[10px] border border-border no-underline transition-[border-color,background] duration-200 hover:border-subject hover:bg-subject/[0.04] group"
                     >
                       <p className="text-[14px] font-semibold text-foreground mb-1 font-heading">
                         {child.label}
@@ -165,7 +165,7 @@ function MegaDropdown({ item, onClose, isActive, navbarBottom, whatsNewLabel }: 
                       href={child.href}
                       onClick={onClose}
                       className={cn(
-                        "block px-3 py-2 rounded-lg text-[14px] no-underline transition-[background,color] duration-150 hover:bg-primary/8 hover:text-foreground",
+                        "block px-3 py-2 rounded-lg text-[14px] no-underline transition-[background,color] duration-150 hover:bg-subject/8 hover:text-foreground",
                         isActive(child.href)
                           ? "text-foreground font-semibold"
                           : "text-muted-foreground font-normal"
@@ -211,7 +211,7 @@ function MegaDropdown({ item, onClose, isActive, navbarBottom, whatsNewLabel }: 
                               {post.date}
                             </p>
                           )}
-                          <p className="text-[13px] font-semibold text-foreground leading-snug transition-colors duration-200 group-hover:text-primary">
+                          <p className="text-[13px] font-semibold text-foreground leading-snug transition-colors duration-200 group-hover:text-subject">
                             {post.label}
                           </p>
                         </div>
@@ -401,7 +401,7 @@ export default function SiteHeader({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="text-muted-foreground flex items-center transition-colors duration-200 hover:text-primary"
+                    className="text-muted-foreground flex items-center transition-colors duration-200 hover:text-subject"
                   >
                     <Icon />
                   </a>
@@ -455,7 +455,7 @@ export default function SiteHeader({
                       "border-b-2",
                       isActive(item.href)
                         ? "font-semibold text-foreground border-foreground"
-                        : "font-normal text-muted-foreground border-transparent hover:text-foreground hover:bg-primary/[0.06]"
+                        : "font-normal text-muted-foreground border-transparent hover:text-foreground hover:bg-subject/[0.06]"
                     )}
                   >
                     {item.label}
@@ -559,7 +559,7 @@ export default function SiteHeader({
                     href={item.href}
                     onClick={() => !item.children && setMobileOpen(false)}
                     className={cn(
-                      "flex-1 flex items-center px-3 py-2.5 rounded-xl text-[15px] no-underline transition-colors hover:bg-primary/8",
+                      "flex-1 flex items-center px-3 py-2.5 rounded-xl text-[15px] no-underline transition-colors hover:bg-subject/8",
                       isActive(item.href)
                         ? "font-semibold text-foreground"
                         : "font-normal text-muted-foreground"
@@ -597,7 +597,7 @@ export default function SiteHeader({
                         key={child.label}
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block px-3 py-2 rounded-xl text-[13.5px] text-muted-foreground no-underline transition-colors hover:bg-primary/8 hover:text-foreground"
+                        className="block px-3 py-2 rounded-xl text-[13.5px] text-muted-foreground no-underline transition-colors hover:bg-subject/8 hover:text-foreground"
                       >
                         {child.label}
                       </Link>

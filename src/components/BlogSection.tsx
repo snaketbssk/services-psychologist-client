@@ -19,7 +19,7 @@ export default async function BlogSection() {
         <AnimateIn variant="fade-up">
         <div className="flex justify-between items-end mb-10">
           <div>
-            <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">
+            <p className="text-subject text-sm font-medium tracking-widest uppercase mb-2">
               {t("EYEBROW")}
             </p>
             <h2 className="font-heading text-3xl font-bold text-foreground">
@@ -28,7 +28,7 @@ export default async function BlogSection() {
           </div>
           <Link
             href="/blogs"
-            className="text-primary text-sm font-medium hover:underline shrink-0 hidden sm:block"
+            className="text-subject text-sm font-medium hover:underline shrink-0 hidden sm:block"
           >
             {t("VIEW_ALL")}
           </Link>
@@ -39,7 +39,7 @@ export default async function BlogSection() {
           {articles.map((article, i) => (
             <AnimateIn key={article.id} variant="fade-up" delay={i * 100}>
               <article className="h-full group">
-                <Card className="relative overflow-hidden p-0 h-full transition-all duration-200 group-hover:shadow-lg group-hover:ring-primary/40">
+                <Card className="relative overflow-hidden p-0 h-full transition-all duration-200 group-hover:shadow-lg group-hover:ring-subject/40">
                   <Link
                     href={`/blogs/${article.id}`}
                     className="absolute inset-0 z-10"
@@ -72,7 +72,7 @@ export default async function BlogSection() {
         </div>
 
         <div className="mt-8 text-center sm:hidden">
-          <Link href="/blogs" className="text-primary text-sm font-medium hover:underline">
+          <Link href="/blogs" className="text-subject text-sm font-medium hover:underline">
             {t("VIEW_ALL")}
           </Link>
         </div>

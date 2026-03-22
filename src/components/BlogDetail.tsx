@@ -31,7 +31,7 @@ export default async function BlogDetail({ id }: { id: string }) {
       <AnimateIn variant="fade-up">
         <Link
           href="/blogs"
-          className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline mb-8"
+          className="inline-flex items-center gap-1 text-subject text-sm font-medium hover:underline mb-8"
         >
           ← {tDetail("BACK_TO_BLOG")}
         </Link>

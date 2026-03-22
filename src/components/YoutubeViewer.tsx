@@ -330,7 +330,7 @@ export default function YoutubeViewer({
     <section className="overflow-hidden">
       {/* Header */}
       <div className="text-center mb-8 md:mb-12 px-6">
-        <p className="text-xs font-semibold tracking-widest uppercase text-primary mb-3">
+        <p className="text-xs font-semibold tracking-widest uppercase text-subject mb-3">
           {resolvedEyebrow}
         </p>
         <h2 className="font-heading font-bold text-3xl md:text-4xl leading-tight text-foreground mb-3">
@@ -421,7 +421,7 @@ export default function YoutubeViewer({
                       className={cn(
                         "rounded-full transition-all duration-300",
                         isActive
-                          ? "w-2.5 h-2.5 bg-primary"
+                          ? "w-2.5 h-2.5 bg-subject"
                           : "w-2 h-2 bg-muted-foreground/30"
                       )}
                     />

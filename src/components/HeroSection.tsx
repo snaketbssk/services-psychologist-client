@@ -13,7 +13,7 @@ export default async function HeroSection() {
         {/* LEFT: Text content */}
         <AnimateIn variant="fade-right" duration={700}>
           <div className="space-y-6">
-            <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-subject text-sm font-medium tracking-widest uppercase mb-4">
               {t("EYEBROW")}
             </p>
             <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight">
@@ -42,7 +42,7 @@ export default async function HeroSection() {
             </div>
 
             <div className="absolute -bottom-4 left-6 bg-background rounded-xl shadow-sm px-4 py-2 flex flex-col items-center">
-              <span className="font-heading font-bold text-primary text-lg leading-tight">
+              <span className="font-heading font-bold text-subject text-lg leading-tight">
                 {STATS[0].value}
               </span>
               <span className="text-xs text-muted-foreground">
@@ -51,7 +51,7 @@ export default async function HeroSection() {
             </div>
 
             <div className="absolute -top-4 right-6 bg-background rounded-xl shadow-sm px-4 py-2 flex flex-col items-center">
-              <span className="font-heading font-bold text-primary text-lg leading-tight">
+              <span className="font-heading font-bold text-subject text-lg leading-tight">
                 {STATS[1].value}
               </span>
               <span className="text-xs text-muted-foreground">

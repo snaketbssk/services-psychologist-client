@@ -25,7 +25,7 @@ export default async function ServicesSection() {
       <div className="max-w-6xl mx-auto">
         <AnimateIn variant="fade-up">
         <div className="text-center">
-          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
+          <p className="text-subject text-sm font-medium tracking-widest uppercase mb-3">
             {t("EYEBROW")}
           </p>
           <h2 className="font-heading text-3xl font-bold text-foreground">
@@ -42,7 +42,7 @@ export default async function ServicesSection() {
             <AnimateIn key={service.titleKey} variant="fade-up" delay={i * 80}>
             <Card className="hover:shadow-md transition-shadow h-full">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-3">
+                <div className="w-12 h-12 bg-subject/10 rounded-xl flex items-center justify-center text-2xl mb-3">
                   {service.icon}
                 </div>
                 <CardTitle className="text-base font-semibold">
@@ -55,7 +55,7 @@ export default async function ServicesSection() {
                 </p>
               </CardContent>
               <CardFooter>
-                <a href="#" className="text-primary text-sm font-medium hover:underline">
+                <a href="#" className="text-subject text-sm font-medium hover:underline">
                   {t("READ_MORE")}
                 </a>
               </CardFooter>

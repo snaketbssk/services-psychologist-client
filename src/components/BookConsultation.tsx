@@ -98,7 +98,7 @@ const CONTACT_INFO = [
 // ─── Shared input class ───────────────────────────────────────────────────────
 
 const inputBase =
-  "w-full rounded-[10px] border border-border bg-background px-[13px] py-[11px] md:px-[15px] md:py-[13px] text-sm text-foreground placeholder:text-muted-foreground transition-[border-color,box-shadow] focus:outline-none focus:border-primary focus:ring-[3px] focus:ring-primary/20 disabled:opacity-60";
+  "w-full rounded-[10px] border border-border bg-background px-[13px] py-[11px] md:px-[15px] md:py-[13px] text-sm text-foreground placeholder:text-muted-foreground transition-[border-color,box-shadow] focus:outline-none focus:border-subject focus:ring-[3px] focus:ring-subject/20 disabled:opacity-60";
 
 // ─── Component ────────────────────────────────────────────────────────────────
 

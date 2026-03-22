@@ -16,7 +16,7 @@ export default async function TestimonialsSection() {
       <div className="max-w-6xl mx-auto">
         <AnimateIn variant="fade-up">
         <div className="text-center mb-12">
-          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
+          <p className="text-subject text-sm font-medium tracking-widest uppercase mb-3">
             {t("EYEBROW")}
           </p>
           <h2 className="font-heading text-3xl font-bold text-foreground">
@@ -33,13 +33,13 @@ export default async function TestimonialsSection() {
             <AnimateIn key={item.nameKey} variant="fade-up" delay={i * 100}>
             <Card className="h-full">
               <CardContent className="pt-6 flex flex-col gap-4">
-                <div className="text-primary text-lg">★★★★★</div>
+                <div className="text-subject text-lg">★★★★★</div>
                 <p className="font-decorative italic text-foreground/90 leading-relaxed text-sm flex-1">
                   &ldquo;{t(item.quoteKey)}&rdquo;
                 </p>
                 <div className="border-t border-border" />
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-subject/20 flex items-center justify-center text-subject font-bold text-sm shrink-0">
                     {item.initials}
                   </div>
                   <div>

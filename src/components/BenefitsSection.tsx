@@ -15,7 +15,7 @@ export default async function BenefitsSection() {
       <div className="max-w-6xl mx-auto">
         <AnimateIn variant="fade-up">
         <div className="text-center mb-12">
-          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
+          <p className="text-subject text-sm font-medium tracking-widest uppercase mb-3">
             {t("EYEBROW")}
           </p>
           <h2 className="font-heading text-3xl font-bold text-foreground">
@@ -31,7 +31,7 @@ export default async function BenefitsSection() {
           {benefits.map((benefit, i) => (
             <AnimateIn key={benefit.titleKey} variant="fade-up" delay={i * 100}>
             <div className="px-8 py-8 sm:py-0 text-center">
-              <div className="w-14 h-14 bg-primary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl">
+              <div className="w-14 h-14 bg-subject/10 rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl">
                 {benefit.icon}
               </div>
               <h3 className="font-heading font-semibold text-xl text-foreground mb-2">

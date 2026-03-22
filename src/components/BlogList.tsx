@@ -78,7 +78,7 @@ export default async function BlogList() {
     <section className="max-w-6xl mx-auto">
       <AnimateIn variant="fade-up">
         <div className="mb-10">
-          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">
+          <p className="text-subject text-sm font-medium tracking-widest uppercase mb-2">
             {t("EYEBROW")}
           </p>
           <h1 className="font-heading text-4xl font-bold text-foreground">
@@ -95,7 +95,7 @@ export default async function BlogList() {
           <AnimateIn key={article.id} variant="fade-up" delay={i * 100}>
             {/* article wraps the card and is the group target for hover effects */}
             <article className="h-full group">
-              <Card className="relative overflow-hidden p-0 h-full transition-all duration-200 group-hover:shadow-lg group-hover:ring-primary/40">
+              <Card className="relative overflow-hidden p-0 h-full transition-all duration-200 group-hover:shadow-lg group-hover:ring-subject/40">
                 {/* stretched link — makes the whole card clickable */}
                 <Link
                   href={`/blogs/${article.id}`}
