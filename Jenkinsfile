@@ -1,117 +1,30 @@
 #!groovy
+//
+// CI/CD for Services.Identity.Api.
+//
+// Every stage lives in the Services.Jenkins shared library:
+// https://github.com/snaketbssk/Services.Jenkins  (its README has the full config reference)
+//
+//   CI (every branch, every PR): Checkout -> Validate -> Test -> Build image
+//   CD (dev and prd only)      : Publish image -> Deploy
+//
+// PILOT PIN: this repo is proving the library, so it tracks the library's `dev` branch.
+// Change to @Library('services-jenkins@v1') once the v1 tag is moved.
 
-properties([disableConcurrentBuilds()])
+@Library('services-jenkins@dev') _
 
-pipeline {
-    agent any
+dotnetServicePipeline(
+    image:         'propokot/services-psychologist-client',
+    serviceName:   'services-psychologist-client',
+    project:       'services-psychologist-client',
 
-    environment {
-        DOCKER_DOCKERFILE = './Dockerfile'
-        DOCKER_IMAGE = 'propokot/services-psychologist-client'
-        DOCKER_CREDENTIAL = 'docker-hub-credentials'
-        SERVICE_NAME = 'services-psychologist-client'
-        NEXT_PUBLIC_API_URL = credentials('next-public-api-url')
-    }
+    // The Dockerfile COPYs are relative to src/ ("Services.Identity.Api/....csproj") and
+    // .dockerignore lives at src/.dockerignore, so the build context is src, not the
+    // repository root.
+    dockerfile:    './Dockerfile',
+    dockerContext: 'src',
 
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Docker System Prune') {
-            steps {
-                sh '''
-                docker system prune -af
-                '''
-            }
-        }
-
-        stage('Build image') {
-            steps {
-                sh '''
-                docker build -f "$DOCKER_DOCKERFILE" --force-rm \
-                --build-arg NEXT_PUBLIC_API_URL="$NEXT_PUBLIC_API_URL" \
-                -t "$DOCKER_IMAGE:latest" .
-                '''
-            }
-        }
-
-        stage('Docker login') {
-            steps {
-                withCredentials([usernamePassword(
-                    credentialsId: DOCKER_CREDENTIAL,
-                    usernameVariable: 'USERNAME',
-                    passwordVariable: 'PASSWORD'
-                )]) {
-                    sh '''
-                    echo "$PASSWORD" | docker login -u "$USERNAME" --password-stdin
-                    '''
-                }
-            }
-        }
-
-        stage('Push image') {
-            steps {
-                sh '''
-                docker push $DOCKER_IMAGE:latest
-                '''
-            }
-        }
-
-        stage('Apply K8s') {
-            steps {
-                withCredentials([
-                    string(credentialsId: 'kubernetes_username', variable: 'KUBERNETES_USERNAME'),
-                    string(credentialsId: 'kubernetes_password', variable: 'KUBERNETES_PASSWORD'),
-                    string(credentialsId: 'kubernetes_url', variable: 'KUBERNETES_URL')
-                ]) {
-                    sh '''
-                    curl -u $KUBERNETES_USERNAME:$KUBERNETES_PASSWORD \
-                    $KUBERNETES_URL/execute-commands/$SERVICE_NAME
-                    '''
-                }
-            }
-        }
-    }
-
-    post {
-        success {
-            script {
-                sendTelegram('OK', 'YES')
-            }
-        }
-
-        aborted {
-            script {
-                sendTelegram('Aborted', 'Aborted')
-            }
-        }
-
-        failure {
-            script {
-                sendTelegram('not OK', 'no')
-            }
-        }
-    }
-}
-
-def sendTelegram(buildStatus, publishStatus) {
-    withCredentials([
-        string(credentialsId: 'telegram_token', variable: 'TOKEN'),
-        string(credentialsId: 'telegram_chat_id', variable: 'CHAT_ID')
-    ]) {
-        sh """
-        MESSAGE="*\$JOB_NAME* : POC
-Branch: \$GIT_BRANCH
-Build: ${buildStatus}
-Published: ${publishStatus}"
-
-        curl -s -X POST "https://api.telegram.org/bot\$TOKEN/sendMessage" \
-            --data-urlencode "chat_id=\$CHAT_ID" \
-            --data-urlencode "parse_mode=Markdown" \
-            --data-urlencode "text=\$MESSAGE"
-        """
-    }
-}
+    // src/Services.Core is a git submodule and the Dockerfile COPYs ~24 csproj files out of
+    // it, so the image cannot build unless the submodule is checked out.
+    submodules:    false
+)
