@@ -22,7 +22,7 @@ dotnetServicePipeline(
     // .dockerignore lives at src/.dockerignore, so the build context is src, not the
     // repository root.
     dockerfile:    './Dockerfile',
-    dockerContext: 'src',
+    dockerContext: '.',
 
     // src/Services.Core is a git submodule and the Dockerfile COPYs ~24 csproj files out of
     // it, so the image cannot build unless the submodule is checked out.
